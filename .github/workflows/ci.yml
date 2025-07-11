@@ -1,0 +1,20 @@
+name: Validación de Código
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+      
+      - name: Verificar archivos
+        run: |
+          echo "Archivos encontrados:"
+          dir
+          echo "Todo correcto"
+ 
